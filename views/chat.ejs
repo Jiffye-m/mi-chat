@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<body>
+  <h1 class="title">iChat 🔥</h1>
+  <div class="main">
+    <div class="name">
+      <span><i class="far fa-user"></i></span>
+      <input
+        type="text"
+        id="name-input"
+        class="name-input"
+        value="<%= name %>"
+        maxlength="20"
+      />
+    </div>
+
+    <ul class="message-container" id="message-container">
+        <!-- Chat data -->
+    </ul>
+
+    <form class="message-form" id="message-form">
+      <input
+        type="text"
+        name="message"
+        id="message-input"
+        class="message-input"
+      />
+      <div class="v-divider"></div>
+      <button type="submit" class="send-button">
+        send <span><i class="fas fa-paper-plane"></i></span>
+      </button>
+    </form>
+  </div>
+  <h3 class="clients-total" id="client-total"></h3>
+  
+<script src="/socket.io/socket.io.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+  integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg=="
+  crossorigin="anonymous"
+></script>
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
